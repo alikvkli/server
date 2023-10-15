@@ -4,7 +4,8 @@ import { Server } from "socket.io";
 export default (httpServer) => {
   const io = new Server(httpServer, {
     cors: {
-      origin: "*",
+      origin: ["http://localhost:3000", "https://alikvkli.dev"],
+      methods: ["GET", "POST"]
     },
   });
 
